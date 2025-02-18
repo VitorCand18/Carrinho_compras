@@ -16,7 +16,7 @@ function adicionar(){
     campoTotal.textContent = `R$ ${totalGeral}`
     document.getElementById("quantidade").value = 0;
 
-    if (quantidade <=0){
+    if (Number(quantidade) <= 0 || !Number.isInteger(Number(quantidade))){
         alert("Selecione a quantidade de itens!");
         limpar();
         return;
